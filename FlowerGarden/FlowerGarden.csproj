@@ -43,7 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bouquet.cs" />
+    <Compile Include="BouquetException.cs" />
+    <Compile Include="BouquetManager.cs" />
     <Compile Include="Flower.cs" />
+    <Compile Include="FlowerException.cs" />
     <Compile Include="Lily.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

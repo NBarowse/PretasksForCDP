@@ -8,8 +8,9 @@ namespace FlowerGarden
 {
     public class Rose: Flower
     {
-        public Rose(string name, double price) : base(name, price)
+        public Rose(double price) : base( price)
         {
+            Name = "Роза";
         }
     }
 }

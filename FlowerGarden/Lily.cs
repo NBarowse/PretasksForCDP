@@ -8,8 +8,10 @@ namespace FlowerGarden
 {
     public class Lily: Flower
     {
-        public Lily(int height, double price):base(height,price)
+        
+        public Lily( double price):base(price)
         {
+            Name = "Лилия";
         }
     }
 }

@@ -8,9 +8,23 @@ namespace FlowerGarden
 {
     public class Bouquet
     {
-        private List<Flower> flowers = new List<Flower>();
+        public List<Flower> flowers = new List<Flower>();
         private double totalPrice;
+        double bouquetCount;
+        public double BouquetCount
+        {
+            get { return bouquetCount; }
 
+            set
+            {
+                if (value <= 0)
+                    throw new BouquetException("Количество цветов в букете должно быть больше нуля.");
+                else if( value >1000)
+                    throw new BouquetException("Количество цветов в букете не может превышать 1000 штук.");
+                else
+                    bouquetCount = value;
+            }
+        }
         public void AddFlower(Flower flower)
         {
             flowers.Add(flower);
@@ -20,6 +34,5 @@ namespace FlowerGarden
         {
             return totalPrice;
         }
-    }
-        
+    }        
 }

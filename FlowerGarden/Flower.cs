@@ -8,12 +8,22 @@ namespace FlowerGarden
 {
     public abstract class Flower
     {
-        public string Name { get; set; }
-        public double Price { get; set; }
-              
-        public Flower(string name,  double price)
+        double price;
+        public double Price
         {
-            Name = name;    
+            get { return price; }
+
+            set {
+                if (value <= 0)
+                    throw new FlowerException("Цена должна быть больше нуля.");
+                else
+                    price = value;
+
+            }
+        }
+        public string  Name { get; set; }
+        public Flower( double price)
+        {  
             Price = price;
         }
 

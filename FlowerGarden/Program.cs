@@ -20,7 +20,18 @@ namespace FlowerGarden
                 Console.WriteLine("2 - Добавить цветок");
                 Console.WriteLine("3 - Просмотреть букет");
                 Console.WriteLine("4 - Рассчитать стоимость букета");
-                Console.WriteLine("5 - Выход");
+                Console.WriteLine("\n******TXT******");
+                Console.WriteLine("5 - Прочитать букет из текстового файла");
+                Console.WriteLine("6 - Записать букет в текстовый файл");
+                Console.WriteLine("\n******BIN******");
+                Console.WriteLine("7 - Прочитать букет из бинарного файла");
+                Console.WriteLine("8 - Записать букет в бинарный файл");
+                Console.WriteLine("\n******XML******");
+                Console.WriteLine("9 - Прочитать букет из XML файла");
+                Console.WriteLine("10 - Записать букет в XML файл");
+                Console.WriteLine("\n11 - Выход");
+
+                Console.Write("\nВаш выбор: ");
                 try
                 {
                     int choice = Int32.Parse(Console.ReadLine());
@@ -39,6 +50,24 @@ namespace FlowerGarden
                             BouquetManager.DisplayPrice(bouquet);
                             break;
                         case 5:
+                            BouquetManager.ReadFromTextFile(ref bouquet);
+                            break;
+                        case 6:
+                            BouquetManager.WriteToTextFile(bouquet);
+                            break;
+                        case 7:
+                            BouquetManager.DeserializeFromBinFile(bouquet);
+                            break;
+                        case 8:
+                            BouquetManager.SerializeToBinFile(bouquet);
+                            break;
+                        case 9:
+                            BouquetManager.DeserializeFromXmlFile(bouquet);
+                            break;
+                        case 10:
+                            BouquetManager.SerializeToXmlFile(bouquet);
+                            break;
+                        case 11:
                             Environment.Exit(0);
                             break;
                         default:
@@ -69,38 +98,12 @@ namespace FlowerGarden
                 }                
                 catch (Exception error)
                 {
-                    Console.WriteLine("Возникла ошибка: {0}", error.Message);
+                    Console.WriteLine("Возникла ошибка: {0}", error.InnerException);
                     Console.ReadKey();
                 }
             }             
            
-        }      
+        }    
         
-        /* private static int TryParseInt(string text)
-         {
-             Console.WriteLine(text);
-             string value = Console.ReadLine();
-             int result;
-             while (!Int32.TryParse(value, out result))
-             {
-                 Console.WriteLine("Incorrect input !");
-                 Console.WriteLine(text);
-                 value = Console.ReadLine();
-             }
-             return result;
-         }
-         private static double TryParseDouble(string text)
-         {
-             Console.WriteLine(text);
-             string value = Console.ReadLine();
-             double result;
-             while (!Double.TryParse(value, out result))
-             {
-                 Console.WriteLine("Incorrect input !");
-                 Console.WriteLine(text);
-                 value = Console.ReadLine();
-             }
-             return result;
-         }*/
     }
 }

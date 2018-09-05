@@ -42,19 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bouquet.cs" />
-    <Compile Include="BouquetException.cs" />
-    <Compile Include="BouquetManager.cs" />
-    <Compile Include="Flower.cs" />
-    <Compile Include="FlowerException.cs" />
-    <Compile Include="Lily.cs" />
+    <Compile Include="Entities\Bouquet.cs" />
+    <Compile Include="ExceptionHandler\BouquetException.cs" />
+    <Compile Include="Services\BouquetManager.cs" />
+    <Compile Include="Entities\Flower.cs" />
+    <Compile Include="ExceptionHandler\FlowerException.cs" />
+    <Compile Include="Entities\Lily.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rose.cs" />
-    <Compile Include="Tulip.cs" />
+    <Compile Include="Entities\Rose.cs" />
+    <Compile Include="Entities\Tulip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

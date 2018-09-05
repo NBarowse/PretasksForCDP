@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace FlowerGarden
 {
+    [Serializable]
     public abstract class Flower
     {
+        public int Code { get; set; }
+        public string Name { get; set; }
         double price;
         public double Price
         {
@@ -21,7 +24,8 @@ namespace FlowerGarden
 
             }
         }
-        public string  Name { get; set; }
+        public Flower()
+        {  }
         public Flower( double price)
         {  
             Price = price;

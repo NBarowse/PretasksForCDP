@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//4.2 -	Process different kinds of requests as SELECT, DELETE, UPDATE, INSERT using ADO.NET
+//-	Call at least one stored procedure using ADO.NET
 
 namespace DbExample
 {

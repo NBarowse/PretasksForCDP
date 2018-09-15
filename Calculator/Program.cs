@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//1.1	Написать простейший калькулятор – консольное приложение
+//(реализовать как минимум 4 операции: сложение, вычитание, умножение, деление) с вводом\выводом из консоли
 namespace Calculator
 {
     class Program

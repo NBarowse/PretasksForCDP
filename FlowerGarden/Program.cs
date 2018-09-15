@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//2.1	Цветочница. Определить иерархию цветов. Создать несколько объектов-цветов. Собрать букет с определением его стоимости. 
+//3.1   Создать минимум 3 пользовательских исключения и использовать минимум 5 встроенных исключений.
+//3.2   Дополнить сценарии, реализованные в задании 2.1 – добавить чтение и запись данных из следующих источников:
+//      1.	из текстового файла
+//      2.	из бинарного файла(используя сериализацию и десериализацию)
+//4.1   Use the scenarios created in scope of the task 2.1, 3.1, 3.2. Add data reading from XML File using de\serialization
+
 
 namespace FlowerGarden
 {

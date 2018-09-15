@@ -12,6 +12,7 @@ namespace Collections_Comparison
         public static void CompareArrayListVsLinkedList()
         {
             //a.	Листы (ArrayList vs LinkedList);
+            Console.WriteLine("********Lists (ArrayList vs LinkedList);********");
             ArrayList arrayL = new ArrayList();
             LinkedList<int> linkedL = new LinkedList<int>();
             int k = 10000;
@@ -38,7 +39,6 @@ namespace Collections_Comparison
             TimeSpan finishList = DateTime.Now.TimeOfDay;
             TimeSpan timeList = finishList - startList;
 
-            Console.WriteLine("********Lists (ArrayList vs LinkedList);********");
             Console.WriteLine("1.1) Add elements to the end");
             Console.WriteLine("ArrayList, {0} ms", timeArray.Milliseconds);//O(1),  could be O (n) if element count will be reached beyond initial capacity after insertion
             Console.WriteLine("LinkedList, {0} ms", timeList.Milliseconds);//O(1)
@@ -69,8 +69,7 @@ namespace Collections_Comparison
             }
             finishList = DateTime.Now.TimeOfDay;
             timeList = finishList - startList;
-
-
+            
             Console.WriteLine("\n1.2) Add elements to the middle");
             Console.WriteLine("ArrayList, {0} ms", timeArray.Milliseconds);//O(n)
             Console.WriteLine("LinkedList, {0} ms", timeList.Milliseconds);//O(n)
@@ -234,9 +233,14 @@ namespace Collections_Comparison
 
             Console.ReadKey();
         }
+
+
+
+
         public static void CompareStackVsQueue()
         {
             //b.	Списки (Stack vs Queue);
+            Console.WriteLine("\n\n********Stack vs Queue********");
             Stack<int> stack = new Stack<int>();
             Queue<int> queue = new Queue<int>();
 
@@ -264,7 +268,6 @@ namespace Collections_Comparison
             TimeSpan finishQueue = DateTime.Now.TimeOfDay;
             TimeSpan timeQueue = finishQueue - startQueue;
 
-            Console.WriteLine("\n\n********Stack vs Queue********");
             Console.WriteLine("1) Add elements: Stack - at start, Queue - at end");
             Console.WriteLine("Stack, {0} ms", timeStack.Milliseconds);
             Console.WriteLine("Queue, {0} ms", timeQueue.Milliseconds);
@@ -333,9 +336,14 @@ namespace Collections_Comparison
 
             Console.ReadKey();
         }
+
+
+
+
         public static void CompareHashTableVsDictionary()
         {
             //c.	словари (HashTable vs Dictionary);
+            Console.WriteLine("\n\n********HashTable vs Dictionary********");
             Hashtable hashTable = new Hashtable();
             Dictionary<int, string> dictionary = new Dictionary<int, string>();
             int k = 10000;
@@ -361,7 +369,6 @@ namespace Collections_Comparison
             TimeSpan finishDict = DateTime.Now.TimeOfDay;
             TimeSpan timeDict = finishDict - startDict;
 
-            Console.WriteLine("\n\n********HashTable vs Dictionary********");
             Console.WriteLine("1) Add elements");
             Console.WriteLine("HashTable, {0} ms", timeHashTable.Milliseconds);
             Console.WriteLine("Dictionary, {0} ms", timeDict.Milliseconds);

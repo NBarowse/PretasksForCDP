@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransposeMatrix", "Transpos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowerGarden", "FlowerGarden\FlowerGarden.csproj", "{EBC10629-5F0D-487C-999F-9B211547D912}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections Comparison", "Collections Comparison\Collections Comparison.csproj", "{774E3AA2-A153-4340-A04D-E7807CF0B2D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbExample", "DbExample\DbExample.csproj", "{655A478D-32C4-477F-89B9-F15F5135F620}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{EBC10629-5F0D-487C-999F-9B211547D912}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBC10629-5F0D-487C-999F-9B211547D912}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBC10629-5F0D-487C-999F-9B211547D912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{774E3AA2-A153-4340-A04D-E7807CF0B2D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{774E3AA2-A153-4340-A04D-E7807CF0B2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{774E3AA2-A153-4340-A04D-E7807CF0B2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{774E3AA2-A153-4340-A04D-E7807CF0B2D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{655A478D-32C4-477F-89B9-F15F5135F620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655A478D-32C4-477F-89B9-F15F5135F620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655A478D-32C4-477F-89B9-F15F5135F620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655A478D-32C4-477F-89B9-F15F5135F620}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

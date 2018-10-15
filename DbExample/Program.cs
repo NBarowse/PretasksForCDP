@@ -29,6 +29,7 @@ namespace DbExample
                     connection.Open();
 
                     //INSERT
+                    Console.WriteLine("Process INSERT...");
                     SqlCommand insertCommand = new SqlCommand("INSERT INTO dbo.Orders(Freight, ShipCountry) VALUES ( @freight, @shipCountry)", connection);
                     insertCommand.Parameters.AddRange(new SqlParameter[]
                     {
@@ -39,6 +40,7 @@ namespace DbExample
                     Console.WriteLine("New values are added to Database Northwind");
 
                     //SELECT - вывдеем запись на консоль, чтобы убедиться, что значение действительно довбелно в базу
+                    Console.WriteLine("Process SELECT...");
                     SqlCommand selectCommand = new SqlCommand("SELECT OrderID, Freight, ShipCountry FROM dbo.Orders WHERE Freight = @freighValue",connection);
                     selectCommand.Parameters.AddWithValue("@freighValue", 1);
                     SqlDataReader reader = selectCommand.ExecuteReader();
@@ -51,6 +53,7 @@ namespace DbExample
                     Console.ReadKey();
 
                     //UPDATE
+                    Console.WriteLine("Process UPDATE...");
                     SqlCommand updateCommand = new SqlCommand("UPDATE dbo.Orders SET ShipCountry = @newCountry WHERE Freight=@freightValue", connection);
                     updateCommand.Parameters.AddRange(new SqlParameter[]
                     {
@@ -61,6 +64,7 @@ namespace DbExample
                     Console.WriteLine("Values are updated");
 
                     //выведем обновленную запись на консоль, чтобы убедиться, что значение обновилось
+                    Console.WriteLine("Process SELECT...");
                     reader = selectCommand.ExecuteReader();
                     while (reader.Read())
                     {
@@ -71,12 +75,14 @@ namespace DbExample
                     Console.ReadKey();
 
                     //DELETE
+                    Console.WriteLine("Process DELETE...");
                     SqlCommand deleteCommand = new SqlCommand("DELETE FROM dbo.Orders WHERE Freight = @freighValue", connection);
                     deleteCommand.Parameters.AddWithValue("@freighValue", 1);
                     deleteCommand.ExecuteNonQuery();
                     Console.WriteLine("Values are deleted");
 
                     //выведем на консоль, чтобы убедиться, что данных не будет
+                    Console.WriteLine("Process SELECT...");
                     reader = selectCommand.ExecuteReader();
                     while (reader.Read())
                     {

@@ -11,7 +11,7 @@ namespace Collections_Comparison
     {
         public static void CompareArrayListVsLinkedList()
         {
-            Console.WriteLine("manipulating with 10 000 items");
+            Console.WriteLine("Manipulating with 10 000 items\n\n");
             //a.	Листы (ArrayList vs LinkedList);
             Console.WriteLine("********Lists (ArrayList vs LinkedList);********");
             ArrayList arrayL = new ArrayList();
@@ -195,7 +195,7 @@ namespace Collections_Comparison
             timeList = finishList - startList;
 
 
-            Console.WriteLine("\n3.1) Delete element in the middle");
+            Console.WriteLine("\n3.2) Delete element in the middle");
             Console.WriteLine("ArrayList, {0} ms", timeArray.Milliseconds);//O(n)
             Console.WriteLine("LinkedList, {0} ms", timeList.Milliseconds);//O(n)
             faster = timeArray < timeList ? "ArrayList" : "LinkedList";
@@ -226,7 +226,7 @@ namespace Collections_Comparison
             timeList = finishList - startList;
 
 
-            Console.WriteLine("\n3.1) Delete element at start");
+            Console.WriteLine("\n3.3) Delete element at start");
             Console.WriteLine("ArrayList, {0} ms", timeArray.Milliseconds);//O(n)
             Console.WriteLine("LinkedList, {0} ms", timeList.Milliseconds);//O(1)
             faster = timeArray < timeList ? "ArrayList" : "LinkedList";

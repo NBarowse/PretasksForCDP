@@ -1,33 +1,18 @@
 <?xml version="1.0"?>
 <ArrayOfFlower xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Flower xsi:type="Rose">
-    <Code>2</Code>
-    <Name>Роза</Name>
-    <Price>3.45</Price>
-  </Flower>
   <Flower xsi:type="Lily">
     <Code>1</Code>
     <Name>Лилия</Name>
-    <Price>4.5</Price>
-  </Flower>
-  <Flower xsi:type="Tulip">
-    <Code>3</Code>
-    <Name>Тюльпан</Name>
-    <Price>1.5</Price>
-  </Flower>
-  <Flower xsi:type="Tulip">
-    <Code>3</Code>
-    <Name>Тюльпан</Name>
     <Price>1</Price>
-  </Flower>
-  <Flower xsi:type="Tulip">
-    <Code>3</Code>
-    <Name>Тюльпан</Name>
-    <Price>22</Price>
   </Flower>
   <Flower xsi:type="Rose">
     <Code>2</Code>
     <Name>Роза</Name>
-    <Price>33</Price>
+    <Price>2</Price>
+  </Flower>
+  <Flower xsi:type="Tulip">
+    <Code>3</Code>
+    <Name>Тюльпан</Name>
+    <Price>333</Price>
   </Flower>
 </ArrayOfFlower>

@@ -8,8 +8,7 @@ namespace FlowerGarden
 {
     public class Bouquet
     {
-        public List<Flower> flowers = new List<Flower>();
-        private double totalPrice;
+        public List<Flower> flowers = new List<Flower>();         
         double bouquetCount;
         public double BouquetCount
         {
@@ -28,10 +27,12 @@ namespace FlowerGarden
         public void AddFlower(Flower flower)
         {
             flowers.Add(flower);
-            totalPrice += flower.Price;
         }
         public double GetTotalPrice()
         {
+            double totalPrice = 0;
+            for (int i=0; i< bouquetCount;i++)
+                totalPrice += flowers[i].Price;
             return totalPrice;
         }
     }        

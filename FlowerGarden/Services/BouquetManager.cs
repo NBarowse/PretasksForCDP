@@ -9,7 +9,7 @@ namespace FlowerGarden
 {
     public class BouquetManager
     {
-        public static void Create(Bouquet bouquet)
+        public static void Create(ref Bouquet bouquet)
         {
             if (bouquet.BouquetCount > 0) bouquet = new Bouquet();
             Console.WriteLine("Введите количество цветков в букете: ");
@@ -74,7 +74,7 @@ namespace FlowerGarden
         internal static void ReadFromTextFile(ref Bouquet bouquet)
         {
             if (bouquet.BouquetCount > 0) bouquet = new Bouquet();
-            StreamReader fileIn = new StreamReader(@"C:\Users\Anastasiya_Maniak\source\repos\Calculator\BouquetFromTextFile.txt", Encoding.Default);
+            StreamReader fileIn = new StreamReader(@"C:\Users\Anastasiya_Maniak\source\repos\PretasksForCDP\BouquetFromTextFile.txt", Encoding.Default);
             string line;            
             while ((line = fileIn.ReadLine()) != null)
             {
@@ -91,7 +91,7 @@ namespace FlowerGarden
        
         internal static void WriteToTextFile(Bouquet bouquet)
         {
-            StreamWriter fileOut = new StreamWriter(@"C:\Users\Anastasiya_Maniak\source\repos\Calculator\BouquetFromTextFile.txt", false);
+            StreamWriter fileOut = new StreamWriter(@"C:\Users\Anastasiya_Maniak\source\repos\PretasksForCDP\BouquetFromTextFile.txt", false);
             foreach (var flower in bouquet.flowers)
                 fileOut.WriteLine("{0},{1},{2}", flower.Code,flower.Name,flower.Price);
             fileOut.Close();
@@ -99,11 +99,11 @@ namespace FlowerGarden
             Console.ReadKey();
         }
 
-        internal static void DeserializeFromBinFile(Bouquet bouquet)
+        internal static void DeserializeFromBinFile(ref Bouquet bouquet)
         {
             if (bouquet.BouquetCount > 0) bouquet = new Bouquet();
             BinaryFormatter bf = new BinaryFormatter();
-            using (FileStream fs = new FileStream(@"C:\Users\Anastasiya_Maniak\source\repos\Calculator\BouquetFromBinFile.bin", FileMode.Open))
+            using (FileStream fs = new FileStream(@"C:\Users\Anastasiya_Maniak\source\repos\PretasksForCDP\BouquetFromBinFile.bin", FileMode.Open))
             {
                 bouquet.flowers = (List<Flower>)bf.Deserialize(fs);
                 bouquet.BouquetCount = bouquet.flowers.Count;
@@ -115,18 +115,18 @@ namespace FlowerGarden
         internal static void SerializeToBinFile(Bouquet bouquet)
         {
             BinaryFormatter bf = new BinaryFormatter();
-            using (FileStream fs = new FileStream(@"C:\Users\Anastasiya_Maniak\source\repos\Calculator\BouquetFromBinFile.bin", FileMode.Create))
+            using (FileStream fs = new FileStream(@"C:\Users\Anastasiya_Maniak\source\repos\PretasksForCDP\BouquetFromBinFile.bin", FileMode.Create))
             {
                 bf.Serialize(fs, bouquet.flowers);
             }
             Console.WriteLine("Букет записан в бинарный файл");
             Console.ReadKey();
         }
-        internal static void DeserializeFromXmlFile(Bouquet bouquet)
+        internal static void DeserializeFromXmlFile(ref Bouquet bouquet)
         {
             if (bouquet.BouquetCount > 0) bouquet = new Bouquet();
             XmlSerializer xs = new XmlSerializer(typeof(List<Flower>), new Type[] { typeof(List<Rose>), typeof(List<Tulip>), typeof(List<Lily>) });
-            using (FileStream fs = new FileStream(@"C:\Users\Anastasiya_Maniak\source\repos\Calculator\BouquetFromXmlFile.xml", FileMode.Open))
+            using (FileStream fs = new FileStream(@"C:\Users\Anastasiya_Maniak\source\repos\PretasksForCDP\BouquetFromXmlFile.xml", FileMode.Open))
             {
                 bouquet.flowers = (List<Flower>)xs.Deserialize(fs);
                 bouquet.BouquetCount = bouquet.flowers.Count;
@@ -138,7 +138,7 @@ namespace FlowerGarden
         internal static void SerializeToXmlFile(Bouquet bouquet)
         {
             XmlSerializer xs = new XmlSerializer(typeof(List<Flower>), new Type[] { typeof(List<Rose>), typeof(List<Tulip>), typeof(List<Lily>) });
-            using (FileStream fs = new FileStream(@"C:\Users\Anastasiya_Maniak\source\repos\Calculator\BouquetFromXmlFile.xml", FileMode.Create))
+            using (FileStream fs = new FileStream(@"C:\Users\Anastasiya_Maniak\source\repos\PretasksForCDP\BouquetFromXmlFile.xml", FileMode.Create))
             {
                 xs.Serialize(Console.Out, bouquet.flowers);
                 xs.Serialize(fs, bouquet.flowers);

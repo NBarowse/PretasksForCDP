@@ -45,7 +45,7 @@ namespace FlowerGarden
                     switch (choice)
                     {
                         case 1:
-                            BouquetManager.Create(bouquet);
+                            BouquetManager.Create(ref bouquet);
                             break;
                         case 2:
                             BouquetManager.AddFlowerToBouquet(bouquet);
@@ -63,13 +63,13 @@ namespace FlowerGarden
                             BouquetManager.WriteToTextFile(bouquet);
                             break;
                         case 7:
-                            BouquetManager.DeserializeFromBinFile(bouquet);
+                            BouquetManager.DeserializeFromBinFile(ref bouquet);
                             break;
                         case 8:
                             BouquetManager.SerializeToBinFile(bouquet);
                             break;
                         case 9:
-                            BouquetManager.DeserializeFromXmlFile(bouquet);
+                            BouquetManager.DeserializeFromXmlFile(ref bouquet);
                             break;
                         case 10:
                             BouquetManager.SerializeToXmlFile(bouquet);
@@ -105,7 +105,7 @@ namespace FlowerGarden
                 }                
                 catch (Exception error)
                 {
-                    Console.WriteLine("Возникла ошибка: {0}", error.InnerException);
+                    Console.WriteLine("Возникла ошибка: {0}", error.Message);
                     Console.ReadKey();
                 }
             }             

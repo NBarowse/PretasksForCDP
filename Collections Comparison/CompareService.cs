@@ -11,6 +11,7 @@ namespace Collections_Comparison
     {
         public static void CompareArrayListVsLinkedList()
         {
+            Console.WriteLine("manipulating with 10 000 items");
             //a.	Листы (ArrayList vs LinkedList);
             Console.WriteLine("********Lists (ArrayList vs LinkedList);********");
             ArrayList arrayL = new ArrayList();
